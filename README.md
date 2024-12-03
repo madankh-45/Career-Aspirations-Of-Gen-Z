@@ -1,5 +1,5 @@
 # 💫 About Me:
-i am doing Dataanalyst internship
+I Am Doing Dataanalyst internship
 
 
 ## 🌐 Socials:
