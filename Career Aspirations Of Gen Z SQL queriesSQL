@@ -1,0 +1,127 @@
+create database kulturehire;
+use kulturehire;
+select * from sql_data;
+
+
+select Gender, count(*) as count
+from sql_data
+where Country = 'India'
+group by Gender;
+
+
+select Higher_Education_Aspiration, count(*) as count, (count(*)/(select count(*) from sql_data))*100 as percentage 
+from sql_data
+where Country = 'India'
+group by Higher_Education_Aspiration;
+
+
+select distinct Carrer_Influencers
+from sql_data
+where Country = 'India'
+order by Carrer_Influencers
+Limit 6;
+
+
+select distinct Carrer_Influencers, Gender, count(*) as count
+from sql_data
+where country = 'India'
+group by gender, Carrer_Influencers;
+
+
+select 3_years_tenurity, count(*) as count, (count(*)/(select count(*) from sql_data))*100 as percentage 
+from sql_data
+where country = 'India'
+group by 3_years_tenurity;
+
+
+select Likelihood_of_working_at_Social_Impactless_company, count(*) as count
+from sql_data
+where country = 'India'
+group by Likelihood_of_working_at_Social_Impactless_company
+order by Likelihood_of_working_at_Social_Impactless_company
+limit 4;
+
+
+select distinct Likelihood_of_working_at_Social_Impactless_company, Gender, count(*) as count
+from sql_data
+where country = 'India'
+group by gender, Likelihood_of_working_at_Social_Impactless_company
+order by Likelihood_of_working_at_Social_Impactless_company;
+
+
+select Expected_Salary_for_first_3_years, count(*) as count_respondents
+from sql_data
+where country = 'India'
+group by Expected_Salary_for_first_3_years
+order by Expected_Salary_for_first_3_years desc;
+
+
+select Minimum_expectations_of_salary, count(*) as count
+from sql_data
+where Country = 'India'
+group by Minimum_expectations_of_salary;
+
+
+select Preferred_Working_environment, count(*) as count, (count(*)/(select count(*) from sql_data))*100 as percentage
+from sql_data
+where country = 'India'
+group by Preferred_Working_environment
+limit 2;
+
+
+select Hours_to_work_willingly, count(*) as count
+from sql_data
+where country ='India'
+group by Hours_to_work_willingly
+order by count desc;
+
+
+select Reason_or_frustration, count(*) as count
+from sql_data
+where country = 'India'
+group by Reason_or_frustration
+order by count desc;
+
+
+select distinct Full_week_break_needed, Gender, count(*) as count
+from sql_data
+where country = 'India'
+group by gender, Full_week_break_needed;
+
+
+select Working_with_Abusive_Manager, count(*) as count_respondents 
+from sql_data
+where country = 'India'
+group by Working_with_Abusive_Manager;
+
+
+select Expected_Salary_after_5_years, count(*) as count_respondents
+from sql_data
+where country = 'India'
+group by Expected_Salary_after_5_years
+order by Expected_Salary_after_5_years desc;
+
+
+select distinct Preferred_Working_environment, Gender, count(*) as count
+from sql_data
+where country = 'India'
+group by gender, Preferred_Working_environment;
+
+
+select distinct Reason_or_frustration, Gender, count(*) as count
+from sql_data
+where country = 'India'
+group by gender, Reason_or_frustration
+limit 4;
+
+
+select distinct Reason_for_Happiness as factors_boosting_work_happiness, count(*) as count
+from sql_data
+where country = 'India'
+group by factors_boosting_work_happiness;
+
+
+select Higher_Education_Aspiration, count(*) as count, (count(*)/(select count(*) from sql_data))*100 as percentage
+from sql_data
+where country = 'India'
+group by Higher_Education_Aspiration;
